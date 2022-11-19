@@ -10,7 +10,7 @@ namespace PLChecker
     {
         public void writeExamples()
         {
-            string[] lines = System.IO.File.ReadAllLines(@"C:/Users/micha/Desktop/examples/exs.pl");
+            string[] lines = System.IO.File.ReadAllLines(@"C:\Users\micha\Desktop\PLChecker\PLChecker\input\examples.pl");
             List<string> examples = new List<string>();
 
             foreach (var line in lines)
@@ -22,9 +22,15 @@ namespace PLChecker
                 }
             }
 
-            using (StreamWriter writeFile = new StreamWriter("C:/Users/micha/Desktop/examples/positiveExs.pl"))
+            using (StreamWriter writeFile = new StreamWriter("C:\\Users\\micha\\Desktop\\PLChecker\\PLChecker\\output\\examples.pl"))
             {
+                foreach (var line in examples)
+                {
+                    string immediate = line.Substring(0, line.LastIndexOf(")."));
+                    immediate += @".";
 
+                    writeFile.WriteLine(immediate);
+                }
             }
 
         }
