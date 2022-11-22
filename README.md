@@ -1,8 +1,6 @@
 # PLChecker
-Checks Prolog queries against ILP background knowledge and hypotheses
+Enables automatic Prolog query checking against ILP BK and hypotheses.
 
-input -> domain.pl(BK, hypotheses), examples.pl(pos/neg examples)
+Input: domain.pl(BK and hypotheses), examples.pl(exs.pl)
 
-output -> results.txt(results from query checking), examples.pl(converted examples)
-
-Ensure all predicate clauses are sorted to avoid discontigous predicate error
+Output: results.txt(example + true/false), examples.pl(Formatted examples)
