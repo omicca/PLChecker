@@ -1,0 +1,12 @@
+Contains results in the form of:
+
+Queried example
+result
+
+EXAMPLES:
+
+move_t_to_b(b8,b1,p43).
+true
+
+move_t_to_b(b1,b1,p43).
+false

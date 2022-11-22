@@ -17,14 +17,13 @@ class Program
         var prolog = new PrologEngine(persistentCommandHistory: false);
         prolog.Consult("C:\\Users\\micha\\Desktop\\PLChecker\\PLChecker\\input\\domain.pl");
 
-        foreach (var example in examples)
+        using (StreamWriter writeFile = new StreamWriter(@"C:\Users\micha\Desktop\PLChecker\PLChecker\output\results.txt"))
         {
-
+            foreach (var example in examples)
+            {
+                var solution = prolog.GetFirstSolution(query: example);
+                writeFile.WriteLine($"{example}" + $"{solution}\n");
+            }
         }
-
-
-        var solution = prolog.GetFirstSolution(query: "move_t_to_b(b5,b8,p48).");
-
-        Console.WriteLine(solution.Solved);
     }
 }
