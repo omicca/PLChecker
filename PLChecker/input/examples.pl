@@ -1,1 +1,10 @@
-<insert exs.pl (training data)>
+pos(move_t_to_b(b8,b1,p43)).
+neg(move_t_to_b(b1,b1,p43)).
+neg(move_t_to_b(b1,b3,p43)).
+neg(move_t_to_b(b1,b5,p43)).
+neg(move_t_to_b(b1,b7,p43)).
+neg(move_t_to_b(b3,b1,p43)).
+neg(move_t_to_b(b3,b3,p43)).
+neg(move_t_to_b(b3,b5,p43)).
+neg(move_t_to_b(b3,b6,p43)).
+neg(move_t_to_b(b3,b7,p43)).
